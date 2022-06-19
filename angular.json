@@ -82,26 +82,11 @@
           "options": {
             "browserTarget": "hero-jest:build"
           }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
-          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f110fad6-b6d8-42c9-a4b5-1ff7be084a44"
   }
 }
