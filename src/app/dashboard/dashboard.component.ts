@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../shared/intefaces/hero';
 import { HeroService } from '../shared/service/hero.service';
+import { DateTimeService } from '../shared/service/date-time.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,11 +10,13 @@ import { HeroService } from '../shared/service/hero.service';
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
+  momentOfTheDay: string = '';
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService, private dateTimeService: DateTimeService) { }
 
   ngOnInit(): void {
     this.getHeroes();
+    this.momentOfTheDay = this.dateTimeService.getDayMoment(new Date());
   }
 
   getHeroes(): void {
